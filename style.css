@@ -1,4 +1,6 @@
 body {
+    font-family: 'Times New Roman', Times, serif;
+
     height: 100%;
     margin: 0;
 }
@@ -48,11 +50,68 @@ body {
 
 /* Top Txt edit -----------------------------> */
 
-.upper{
-    
+.upper {
+    display: flex;
+    flex-direction: column;
 }
 
-.topText{
-    display: flex;
+.topText,
+.topText_2 {
+    width: 60%;
+    font-size: clamp(12px, 2vw, 20px);
+    margin-left: 54px;
+    font-weight: 700;
 
+}
+
+.topText {
+    margin-top: 54px;
+
+}
+
+/* Middle Part ---------------------------------> */
+.middle {
+    padding-left: 54px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.midTop {
+    display: flex;
+    flex-direction: row;
+    gap: 84px;
+}
+
+.doThis {
+    width: 60%;
+    font-weight: 700;
+}
+
+.firstName,
+.SecondName {
+    margin-bottom: 4px;
+}
+
+.midDetails{
+    margin-top: 12px;
+}
+
+.Emails{
+    display: flex;
+    flex-direction: column;
+}
+
+#name,
+#email {
+    width: 220px;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.midTopLeft,
+.midTopRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
