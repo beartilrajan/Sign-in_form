@@ -1,24 +1,58 @@
 body {
+    height: 100%;
     margin: 0;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.image {
-    width: 40%;
-    flex-shrink: 0;
-}
-
-
-.contents {
+/* The main box containing the layout */
+.layout {
+    height: 100vh;
     display: flex;
     flex-direction: row;
 }
 
+/* The Left side ------------------------>*/
+
+.sidebar {
+    flex: 0 0 40%;
+}
+
+.image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* the right side ------------------------>*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 2px solid red;
+}
+
+.upper,
+.end {
+    height: 30vh;
+    flex-shrink: 0;
+    border: 1px solid black;
+}
+
+.middle {
+    display: flex;
+    flex: 1;
+    border: 1px solid orange;
+}
+
+/* Top Txt edit -----------------------------> */
+
 .upper{
-    border: 20vh solid black;
+    
+}
+
+.topText{
+    display: flex;
+
 }
