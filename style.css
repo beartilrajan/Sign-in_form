@@ -5,6 +5,17 @@ body {
     margin: 0;
 }
 
+/* total */
+input {
+    border: 2px solid rgb(140, 140, 140);
+}
+
+label {
+    margin-bottom: 2px;
+}
+
+
+
 /* The main box containing the layout */
 .layout {
     height: 100vh;
@@ -16,14 +27,32 @@ body {
 
 .sidebar {
     flex: 0 0 40%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.image1 {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 128px;
+    
 }
 
 .image {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     height: 100%;
     width: 100%;
     object-fit: cover;
     flex-shrink: 0;
+    z-index: 1;
 }
 
 /* the right side ------------------------>*/
@@ -33,21 +62,18 @@ body {
     flex-direction: column;
     flex: 1;
     background-color: rgba(249, 250, 251, 0.608);
-    border: 2px solid red;
 }
 
 .upper,
 .end {
     height: 30vh;
     flex-shrink: 0;
-    border: 1px solid black;
 }
 
 .middle {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex: 1;
-    border: 1px solid orange;
 }
 
 /* Top Txt edit -----------------------------> */
@@ -73,11 +99,15 @@ body {
 
 /* Middle Part ---------------------------------> */
 .middle {
-    padding-top: 24px;
+    padding-top: 12px;
     padding-left: 54px;
+    padding-bottom: 24px;
     display: flex;
     flex-direction: column;
-
+    box-shadow:
+        0 -8px 15px rgba(0, 0, 0, 0.12),
+        0 8px 15px rgba(0, 0, 0, 0.12);
+    position: relative;
 }
 
 .midTop,
@@ -89,14 +119,10 @@ body {
 }
 
 .doThis {
-    width: 60%;
+    font-size: 20px;
     font-weight: 700;
 }
 
-.firstName,
-.SecondName {
-    margin-bottom: 4px;
-}
 
 .midDetails,
 .bottomDetails {
@@ -111,7 +137,7 @@ body {
 #ConfirmPassword {
     width: 220px;
     border-radius: 6px;
-    padding: 4px;
+    padding: 6px;
 }
 
 .midTopLeft,
@@ -127,3 +153,33 @@ body {
 
 /* End Box -------------------------------------> */
 
+.end {
+    padding-top: 24px;
+    padding-left: 54px;
+    background-color: rgb(249, 250, 251);
+}
+
+.button {
+    background-color: #596D48;
+    padding: 8px;
+    padding-left: 36px;
+    padding-right: 36px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(232, 232, 232);
+    box-shadow: 5px 5px 15px gray;
+}
+
+.login {
+    color: rgb(56, 56, 56);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input:focus,
+input:active {
+    border: 2px solid rgb(35, 119, 255);
+    box-shadow: 2px 2px 6px rgb(175, 175, 175);
+    outline: none;
+}

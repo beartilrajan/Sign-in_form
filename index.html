@@ -10,6 +10,7 @@
 <body>
     <div class="layout">
         <div class="sidebar">
+            <img src="odin-lined.png" alt="odin" class="image1">
             <img src="halie-west-25xggax4bSA-unsplash.jpg" alt="odin" class="image">
         </div>
         <div class="container">
@@ -46,20 +47,24 @@
                         <input type="number" name="number" id="number" placeholder="Enter your phone number">
                     </div>
                 </div>
-                <div class="bottomDetails">
-                    <div class="PasswordBox">
-                        <label for="Password" class="password">Email Address :</label>
-                        <input type="password" name="password" id="password" placeholder="Enter Password">
-                    </div>
-                    <div class="confirmPasswordBox">
-                        <label for="ConfirmPassword" class="confirmpassword">Phone Number :</label>
-                        <input type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirm password">
-                    </div>
+                <div>
+                    <form action="main.js" class="bottomDetails">
+                        <div class="PasswordBox">
+                            <label for="Password" class="password">Password :</label>
+                            <input type="password" name="password" pattern="[A-Z]" id="password" placeholder="Enter Password" required>
+                        </div>
+                        <div class="confirmPasswordBox">
+                            <label for="ConfirmPassword" class="confirmpassword">Confirm Password :</label>
+                            <input type="password" name="ConfirmPassword" id="ConfirmPassword"
+                                placeholder="Confirm password" required onclick="SamePassword">
+                        </div>
+                    </form>
                 </div>
             </div>
 
             <div class="end">
-                <button type="button">Create Account</button>
+                <button type="button" class="button">Create Account</button>
+                <p class="login">Already have an account ? <a href="#">Log in</a></p>
             </div>
         </div>
     </div>
