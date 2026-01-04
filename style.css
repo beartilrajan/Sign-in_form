@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
+    background-color: rgba(249, 250, 251, 0.608);
     border: 2px solid red;
 }
 
@@ -43,6 +44,7 @@ body {
 }
 
 .middle {
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex: 1;
     border: 1px solid orange;
@@ -71,13 +73,16 @@ body {
 
 /* Middle Part ---------------------------------> */
 .middle {
+    padding-top: 24px;
     padding-left: 54px;
     display: flex;
     flex-direction: column;
 
 }
 
-.midTop {
+.midTop,
+.midDetails,
+.bottomDetails {
     display: flex;
     flex-direction: row;
     gap: 84px;
@@ -93,25 +98,32 @@ body {
     margin-bottom: 4px;
 }
 
-.midDetails{
+.midDetails,
+.bottomDetails {
     margin-top: 12px;
 }
 
-.Emails{
-    display: flex;
-    flex-direction: column;
-}
 
 #name,
-#email {
+#email,
+#number,
+#password,
+#ConfirmPassword {
     width: 220px;
     border-radius: 6px;
     padding: 4px;
 }
 
 .midTopLeft,
-.midTopRight {
+.midTopRight,
+.Emails,
+.number,
+.PasswordBox,
+.confirmPasswordBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+/* End Box -------------------------------------> */
+
